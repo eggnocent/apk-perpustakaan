@@ -1,0 +1,413 @@
+*{
+    padding :0 ;
+    margin  :0 ;
+}
+
+body{
+    width: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #dedede;
+}
+
+.marquee{
+    background-color: #ffffffd7;
+    color: #0006ff
+}
+
+p{
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+h2{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.content{
+    font-size: 8px;
+    color: black;
+    border: 2px solid #000000;
+}
+
+.judul{
+    font-size: 15px;
+    color: black;
+    border: 2px solid #000000;
+}
+
+h3{
+    font : #fff;
+    font-size: 17px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #fff;
+}
+
+h4{
+    font : white;
+    padding-top: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/*Daftar Buku*/
+
+.buku {
+    padding: 0 6px;
+    margin-right: 10px;
+    float: left;
+    border:1px solid #000000;
+    width: 23%;
+}
+
+.judul-primary{
+    background-color: rgb(195, 0, 255);
+    color: white;
+}
+
+.judul:hover{
+    color: #ca1414;
+}
+
+
+.foto img {
+    padding:5px 0 5px 0;
+    width: 100%;
+    height: 250px;
+}
+
+.judul {
+    font-size: 13px;
+    font-weight: 600;
+    padding:0 0 3px 0;
+    text-align: left;
+} 
+
+
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: inherit;
+    font-size: 20px;
+    color: #d4d2db;
+}
+
+a:hover{
+    color: #000;
+}
+
+#container{
+    max-width: 1140px;
+    text-align: center;
+    background: rgb(0, 255, 221);
+    overflow: hidden;
+    border:0px solid #d9d9d9;
+    margin : 0px 90px;
+    padding:20px 20px 20px 20px;
+}
+
+.header{
+    border-radius: 10px 10px 0 0 ;
+    padding: 10px 0 0 10px;
+    text-align : center;
+    background-image: url(../images/header11.jpg);
+}
+
+.header h1{
+    font-size: 40px;
+    color:#00d9ff;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align:center;
+}
+
+
+.left{
+    width: 280px;
+    color:#fff;
+    border: 1px solid black;
+    padding: 10px;
+    float: left;
+    background-color: #821a8b;
+}
+
+.left ul{
+    list-style-type: none;
+}
+
+.left ul li{
+    display: block;
+}
+
+.left ul li a{
+    display: block;
+    font-size: 17px;
+    border-bottom: 1px dotted #d4d2db;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font:  #64bed4;
+}
+
+.left ul li a:hover{
+    color: #ca1414 ;
+}
+
+.middle{
+    width: 500px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+}
+
+.middle img{
+    background-image: img src="images/..vizta.jpg";
+    max-width: 100%;
+    height: auto;
+}
+
+.middle a{
+    font-weight: bold;
+}
+
+.middle2{
+    width: 790px;
+    height:100%;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+}
+
+.middle2 a{
+    font-weight: bold;
+}
+
+.right{
+    width: 280px;
+    color: #fff;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    float: right;
+    background-color: #821a8b;
+}
+
+.right ul{
+    list-style-type: none;
+}
+
+.right ul li{
+    display: block;
+}
+
+.right ul li a{
+    display: block;
+    font-size: 17px;
+    border-bottom: 1px dotted #d4d2db;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
+
+.right ul li a:hover{
+    color: #ca1414;
+}
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    clear: both; 
+    border: 1px solid #dedede;
+    padding: 5px;
+}
+
+@media screen and(max-width:995px){
+    #container{
+        width: 100%;
+    }
+    #left-columm{
+        width: 70%;
+    }
+    #right-columm{
+        width: 30%;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+/* MEDIA QUIRIES (Responsive)***********/
+
+@media screen and (max-width:1140px){
+    .container{
+        width: 100%;
+    }
+    .left{
+        width: 25%;
+        background: #0c7575d7;
+    }
+    .middle{
+        width: 68%;
+        float: right;
+    }
+     .middle2{
+        width: 90%;
+        float: right;
+    }
+
+
+
+    .right{
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+        background: #0c7575d7;   
+    }
+}
+
+/* Untuk ukuran layar 700px kebawah  */
+
+@media screen and (max-width:780px){
+    .header,
+    .footer{
+        text-align: center;
+    }
+    .left{
+        width: auto;
+        float: none;
+    }
+
+    .middle{
+        width: auto;
+        float:  none;
+    }
+
+    .right{
+        width: auto;
+        float: none;
+    }
+}
+.form {
+    width:500px;
+    margin:50px auto;
+}
+.search {
+    padding:8px 15px;
+    background:rgb(255, 255, 255);
+    border:0px solid #dbdbdb;
+}
+.button {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid black;
+    background-color:green;
+    color:#fafafa;
+}
+.button:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+          
+::-webkit-input-placeholder {
+    color:    #dd3333;
+                font-family:Helvetica Neue;
+                font-weight:bold;
+}
+
+ 
+
+/* .mainmenubtn {
+    background-color: #821a8b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainmenubtn:hover {
+    background-color: #821a8b;
+    }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: #821a8b;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+} */
+
+dropdown
+.menu-malasngoding{
+    background-color: #3141ff;
+}
+
+.menu-malasngoding ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-malasngoding > ul > li {
+    float: left;
+}
+
+
+.menu-malasngoding li a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-malasngoding li a:hover{
+    background-color: #821a8b;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .isi-dropdown {
+    display: block;
+}
+
+.isi-dropdown a:hover {
+    color: #821a8b ;
+}
+
+.isi-dropdown {
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px #821a8b;
+    z-index: 1;
+    background-color: #821a8b;
+}
+
+.isi-dropdown a {
+    color: #821a8b ;
+}
+
+.isi-dropdown a:hover {
+    color: #821a8b ;
+    background: #821a8b ;
+} 
+

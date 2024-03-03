@@ -1,0 +1,507 @@
+<?php
+    //mulai session
+    session_start();
+
+    //cek status sudah login
+    if($_SESSION['status']!="login")
+    {
+        header("location:../index.php?pesan=belum_login");
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Stembayo</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- link pemanggilan font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- pemanggilan file css  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> BayoLearn </a>
+
+    <nav class="navbar">
+        <a href="#halamanutama">halaman utama</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#bukufisik">Buku</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#review">Anggota</a>
+        <a href="#berita">Penerbit</a>
+        
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="cari" id="search-box" placeholder="cari di sini...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="../image/cart-img-11.png" alt="">
+            <div class="content">
+                <h3>sejarah</h3>
+                <span class="price">1 Hari</span>
+                <span class="quantity">Jumlah : 1</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="../image/cart-img-25.png" alt="">
+            <div class="content">
+                <h3>dilang</h3>
+                <span class="price">5 Hari</span>
+                <span class="quantity">Jumlah : 1</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="../image/cart-img-31.png" alt="">
+            <div class="content">
+                <h3>PPKN</h3>
+                <span class="price">6 Bulan</span>
+                <span class="quantity">Jumlah : 34</span>
+            </div>
+        </div>
+        <div class="total"> total : 36 Buku </div>
+        <a href="#" class="btn">Pinjam!</a>
+    </div>
+
+    <form action="" class="login-form">
+        <h3>login Sekarang</h3>
+        <input type="email" placeholder="email anda" class="box">
+        <input type="password" placeholder="password anda" class="box">
+        <p>lupa password <a href="#">Klik disini</a></p>
+        <p>belum punya akun? <a href="#">buat sekarang</a></p>
+        <input type="kirim" value="login" class="btn">
+    </form>
+
+</header>
+
+<!-- header berakhir -->
+
+<!-- halaman utama  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Perpustakaan <span>SMK N 2 Depok</span> Yogyakarta</h3>
+        <p>Menyediakan berbagai macam buku yang siap untuk di pinjam </p>
+        <a href="#" class="btn">Pinjam Sekarang!</a>
+    </div>
+
+</section>
+
+<!-- halaman utama berakhir -->
+
+<!-- layanan  -->
+
+<section class="features" id="layanan">
+
+    <h1 class="heading"> Fitur <span>Layanan</span> </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/feature-img-1.png" alt="">
+            <h3>Buku layak baca</h3>
+            <p>Perpustakaan SMK Negeri 2 Depok atau juga Bayolearn menyediakan buku-buku layak baca untuk para siswa</p>
+            <a href="#" class="btn">Baca lebih lengkap</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-2.png" alt="">
+            <h3>Ruang Baca</h3>
+            <p>Perpustakaan SMK Negeri 2 Depok atau juga Bayolearn juga menyediakan ruang baca bagi para siswa yang ingin membaca buku di perpustakaan</p>
+            <a href="#" class="btn">Baca Lebih Lengkap</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-3.png" alt="">
+            <h3>Pelayanan Cepat</h3>
+            <p>Perpustakaan SMK Negeri 2 Depok atau juga bayolearn juga memiliki pelayanan yang cepat dengan adanya 2 penjaga perpustakaan yang selalu siap melayani para siswa</p>
+            <a href="#" class="btn">Baca Lebih Lengkap</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- layanan akhir -->
+
+<!-- awalan buku fisik  -->
+
+<section class="products" id="buku fisik">
+
+    <h1 class="heading"> Buku <span>Fisik</span> </h1>
+
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="../image/sejarah.jpg" alt="">
+                <h3>Sejarah Indonesia</h3>
+                <div class="price"> Stok : 340 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">Pinjam Sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/pkn.jpg" alt="">
+                <h3>PPKN</h3>
+                <div class="price"> Stok : 666 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/bahasaindo.jpg" alt="">
+                <h3>Bahasa Indonesia</h3>
+                <div class="price"> Stok : 328 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/bahasainggris.jpg" alt="">
+                <h3>bahasa inggris</h3>
+                <div class="price"> Stok : 139 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="../image/dilang.jpg" alt="">
+                <h3>Dilang</h3>
+                <div class="price"> Stok : 454 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/mariposa.jpg" alt="">
+                <h3>mariposa</h3>
+                <div class="price"> Stok : 29 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/tekno.jpg" alt="">
+                <h3>tekno</h3>
+                <div class="price"> Stok : 34 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/sains.jpg" alt="">
+                <h3>sains</h3>
+                <div class="price"> Stok : 20 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">pinjam sekarang!</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- akhiran buku fisik -->
+
+<!-- start kategori  -->
+
+<section class="categories" id="kategori">
+
+    <h1 class="heading"> Semua <span>Kategori</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../image/bukupaket.jpg" alt="">
+            <h3>Buku Paket</h3>
+            <p>Kelas 10,11,12 lengkap dengan segalanya</p>
+            <a href="#" class="btn">Pinjam Sekarang!</a>
+        </div>
+
+        <div class="box">
+            <img src="../image/ebookk.jpg" alt="">
+            <h3>E-Book</h3>
+            <p>Umum, Sosial, Sains, Teknologi, Sejarah, DLL</p>
+            <a href="#" class="btn">Baca Sekarang</a>
+        </div>
+
+        <div class="box">
+            <img src="../image/seni.jpg" alt="">
+            <h3>Buku Fisik</h3>
+            <p>Seni, Sains, Bahasa, Agama lengkapd</p>
+            <a href="#" class="btn">Pinjam Sekrang!</a>
+        </div>
+
+        <div class="box">
+            <img src="../image/EBOOK NOVEL.jpg" alt="">
+            <h3>Buku Novel</h3>
+            <p>Novel dalam negeri hingga luar negeri</p>
+            <a href="#" class="btn">Pinjam Sekarang!</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- kategori akhir -->
+
+<!-- sedikit review dimulai  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> Sedikit <span>Review</span> </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="../image/izzalll.jpeg" alt="">
+                <p>Saya telah meminjam buku disini lebih dari 6 kali dalam sebulan, mulai dari buku paket, novel, hingga menyewa E-Book dan menurut saya pelayanan di sini sangat baik dan buku sangat lengkap</p>
+                <h3>Faizal Anam, 11 SIJA-A</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/ddadanggggg.jpeg" alt="">
+                <p>Saya terkesan dengan ruang bacanya yang sunyi, dingin, dan wangi, saya merasakan pengalaman berbeda ketika membaca buku di ruang baca bayolearn</p>
+                <h3>Dadang Adi S, 11 SIJA-A</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/fferdi.jpeg" alt="">
+                <p>Menurut saya sebagai pembaca novel, terutama novel dari jepang, perpustakaan stembayo ini untuk stok novel terbilang cukup untuk pembaca, karena setiap saya mencari novel favorit saya, disini selalu ada, bintang 5 deh!</p>
+                <h3>Ferdinan Ulvan S, 11 SIJA-A</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../image/azzzraaa.jpeg" alt="">
+                <p>Secara pelayanan cukup cepat, tetapi untuk stok buku Bahasa dan Sains masih cukup minim, saran saya untuk menambah stok buku Bahasa dan Sains agar para peminjam mendapat kepuasan dari ketersediaaan stok buku tersebut.</p>
+                <h3>Arkananta Azra</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- sedikit review bagian terkahir -->
+
+<!-- Bagian berita  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> Sekilas <span>Berita</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../image/dana.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> Andrian Pras </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 1 Mei 2022 </a>
+                </div>
+                <h3>Para siswa menggalang dana untuk korban banjir</h3>
+                <p>Terjadinya banjir pada daerah Gunung Kidul, menggugah simpati siswa untuk menggalang dana agar dapat membantu para korban banjir di daerah yang membutuhkan bantuan agar</p>
+                <a href="#" class="btn">Baca Selengkapnya!</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../image/perpus.jpeg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> Hafids </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 29 November 2022 </a>
+                </div>
+                <h3>Sebelum terlaksananya UAS, para siswa meminjam buku novel, ada apa?</h3>
+                <p>Sepekan sebelum pelaksanaan UAS tahun ajaran 2022/2023, banyak siswa berbondong-bondong meminjam buku novel</p>
+                <a href="#" class="btn">Baca Selengkapnya!</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../image/p5.jpeg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> Hauzan </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 15 Oktober 2021 </a>
+                </div>
+                <h3>Kegiatan pekan P5BK menjadi titik awal ke kreatifan siswa</h3>
+                <p>Kegiatan yang dilaksanakan para siswa yaitu mural, pengolahan barang bekas, dan mini bazaar menjadi titk awal ke kreatifan dan keaktifan pada siswa</p>
+                <a href="#" class="btn">Baca Selengkapnya!</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- bagian footer pertama  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> BayoLearn <i class="fas fa-shopping-basket"></i> </h3>
+            <p>Dibangun pada 2016, Bayolearn adalah perpustakaan resmi SMK Negeri 2 Depok atau STM Pembangunan Yogyakarta</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Info narahubung</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> 085829364197 (Admin 1) </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> 0811820325714 (Admin 2) </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> bayoLearn@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Depan Masjid Mujahidin </a>
+        </div>
+
+        <div class="box">
+            <h3>Lebih Cepat</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> halaman Utama </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Layanan </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Buku Fisik </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Kategori </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Review </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Berita </a>
+        </div>
+
+        <div class="box">
+            <h3>Membership</h3>
+            <p>Gabung ke Membership untuk mendapatkan tanda keanggotaan</p>
+            <input type="email" placeholder="Email anda" class="email">
+            <input type="submit" value="Gabung" class="btn">
+            
+        </div>
+
+    </div>
+
+    <div class="credit"> Copiright by<span> StembayoLearn </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer terakhir -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
